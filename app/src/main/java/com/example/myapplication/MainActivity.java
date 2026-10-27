@@ -80,6 +80,17 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        listView.setOnItemLongClickListener(
+                new AdapterView.OnItemLongClickListener() {
+                    @Override
+                    public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                        arrayListWarzywa.remove(i);
+                        arrayAdapter.notifyDataSetChanged();
+
+                        return false;
+                    }
+                }
+        );
 
 
 
