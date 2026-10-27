@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         String nowyElementWarzywo = editTextNowyElement.getText().toString();
-                        if (nowyElementWarzywo != "") {
+                        if (nowyElementWarzywo != null) {
                             arrayListWarzywa.add(nowyElementWarzywo);
                             arrayAdapter.notifyDataSetChanged();
                             editTextNowyElement.setText("");
